@@ -11,3 +11,4 @@ nodeGroups:
     desiredCapacity: 3
     ssh: # use existing EC2 key
       publicKeyName: eks-course
+availabilityZones: ['us-east-1a', 'us-east-1b', 'us-east-1c']
