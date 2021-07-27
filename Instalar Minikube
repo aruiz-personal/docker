@@ -1,0 +1,28 @@
+Requisito:
+- Tener instalado Docker CE o VirtualBox.
+
+Paso 1: Instalar kubectl:
+
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
+chmod +x kubectl
+
+mkdir -p ~/.local/bin/kubectl
+
+mv ./kubectl ~/.local/bin/kubectl
+
+kubectl version --client
+
+Paso 2: Instalar minikube start.
+
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+minikube start
+
+kubectl cluster-info
+
+
